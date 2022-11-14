@@ -15,7 +15,8 @@ the file menu will open, prefilled with that filename.
 
 # how do I install this
 
-1. Clone this repo and navigate to the folder. The home folder includes the file `gotosql-<version>.vsix`.
+1. Clone this repo and navigate to the folder.
 2. Install npm
 3. Run `npm install vsce`
-4. Run `code --install-extension <path-to-vsix-file>`
+4. Run `vsce package` to build the extension
+5. Run `code --install-extension <path-to-vsix-file>`
