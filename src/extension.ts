@@ -36,10 +36,10 @@ export function activate(context: vscode.ExtensionContext) {
 			// Find first sql file and find it in the file explorer (if there is one)
 			let line = editor.selection.active.line; // ln (0-indexed)
 			let text = editor.document.lineAt(line).text; // text in the line
-			let match = text.match(/[a-zA-Z0-9_\-]+\.sql/);
+			let match = text.match(/[\w\-]+\.sql/);
 
 			if (!match) {
-				let match = text.match(/\"[a-zA-Z0-9_\-]+\"/);
+				let match = text.match(/\"[\w\-]+\"/);
 				let firstMatch = match?.toString();
 				let filename = firstMatch?.substring(1,firstMatch?.length-1) + '.sql';
 				if (match)
