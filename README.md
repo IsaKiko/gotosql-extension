@@ -20,3 +20,8 @@ the file menu will open, prefilled with that filename.
 3. Run `npm install vsce`
 4. Run `vsce package` to build the extension
 5. Run `code --install-extension <path-to-vsix-file>`
+
+# untested, but probably working alternative
+
+1. Download only the `vsix` file from this repo
+2. Run `code --install-extension <path-to-vsix-file>`
